@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "dfb07e11-69ed-45fd-9be5-19f2dc83fb80",
+		"name": "Exam-Portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41255929",
+		"_collection_link": "https://manam1-6847.postman.co/workspace/Exam-Portal~e4601315-0c64-4b5f-9cae-1b1e1ec2ac22/collection/41255929-dfb07e11-69ed-45fd-9be5-19f2dc83fb80?action=share&source=collection_link&creator=41255929"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"naveen\",\r\n  \"email\": \"naveen@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "Barer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjhhN2U3MDE1NTE2NmM2MTc5ZTc1YmUwIn0sImlhdCI6MTc1NTgzNDExMywiZXhwIjoxNzU1ODM3NzEzfQ.kgU8mjgbwFbPg80O0WP3aubtkX7x5o9U0uxzxmRlDIc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"naveen@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
